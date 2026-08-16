@@ -1,0 +1,25 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    # This IS the registry, so it doesn't need to register with itself
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    # Faster eviction for local dev; relax this in production
+    eviction-interval-timer-in-ms: 5000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
