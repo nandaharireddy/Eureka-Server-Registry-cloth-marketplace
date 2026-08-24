@@ -7,9 +7,14 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 /**
  * Eureka Server Application.
  *
- * <p>Acts as the centralized service registry for the cloth marketplace microservices architecture.
- * Microservices register their network locations here and discover peer services dynamically.</p>
+ * <p>
+ * Acts as the centralized service registry for the cloth marketplace
+ * microservices architecture.
+ * Microservices register their network locations here and discover peer
+ * services dynamically.
+ * </p>
  */
+
 @SpringBootApplication
 @EnableEurekaServer
 public class EurekaServerApplication {
@@ -23,4 +28,3 @@ public class EurekaServerApplication {
         SpringApplication.run(EurekaServerApplication.class, args);
     }
 }
-
